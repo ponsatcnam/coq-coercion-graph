@@ -98,5 +98,5 @@ Set CoercionGraph File  "newname.dot"
  or simply fixe the name when building the graph
 
 ``` 
- Coercions Graph "name.dot"
+Coercions Graph "name.dot"
 ```
