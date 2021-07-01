@@ -53,7 +53,19 @@ Coq < Print Graph.
 [f5; f3; f2; f1] : ring >-> set
 ```
 This plugin just allows to have a graphical representation (dot format that can be converted or visualised).
-
+```
+digraph coercion_graph { 
+  graph [ratio=1] 
+  node [style=filled] 
+  abelian_group->abelian_monoid [ label=f7 ] 
+  abelian_group->group [ label=f3 ] 
+  abelian_monoid->monoid [ label=f4 ] 
+  group->monoid [ label=f2 ] 
+  monoid->set [ label=f1 ] 
+  ring->abelian_group [ label=f5 ] 
+  ring->abelian_monoid [ label=f6 ] 
+}
+```
 ![the graph](coercion_graph.png)
 
 
