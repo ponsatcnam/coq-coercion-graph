@@ -1,0 +1,10 @@
+-R theories/ Coerciongraph
+-I src
+
+theories/Loader.v
+theories/Demo.v
+
+src/coerciongraph_main.ml
+src/coerciongraph_main.mli
+src/g_coerciongraph.mlg
+src/coerciongraph_plugin.mlpack

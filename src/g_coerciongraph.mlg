@@ -1,0 +1,41 @@
+DECLARE PLUGIN "coerciongraph_plugin"
+
+{
+
+open Pp
+open Stdarg
+
+}
+
+(*** Printing messages ***)
+
+(*
+ * This is a tactic version of the same thing.
+ 
+TACTIC EXTEND hello_world_tactic
+| [ "hello_world" ] ->
+  { let _ = Feedback.msg_notice (str Coerciongraph_main.message) in
+    Tacticals.New.tclIDTAC }
+END
+*)
+
+
+
+VERNAC COMMAND EXTEND coerceGraph CLASSIFIED AS QUERY
+| ["Coercions" "Graph" string(str)] -> { 
+  print_string(str);
+  Coerciongraph_main.builgraph(str);
+  
+ }
+END
+
+
+VERNAC COMMAND EXTEND CoercionGraphSetFile CLASSIFIED AS QUERY
+| ["Set" "CoercionGraph" "File" string(s)] -> { 
+  Coerciongraph_main.filename := s;
+  Feedback.msg_notice (str "filename for coercions graph is now " ++ str s);
+}
+END
+
+
+

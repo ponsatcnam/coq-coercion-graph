@@ -1,0 +1,6 @@
+(library
+ (name coerciongraph_plugin)
+ (public_name coerciongraph_plugin)
+ (libraries coq-core.plugins.ltac))
+
+(coq.pp (modules G_coerciongraph))
