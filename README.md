@@ -68,5 +68,31 @@ digraph coercion_graph {
 ```
 ![the graph](coercion_graph.png)
 
+## Usage
+### build
+    ```
+    make
+    ```
+### start
+    ```    
+    coqtop -I src -R theories Coerciongraph  
+    ```
+### in the Coq session 
+    ```
+    Require Import Tuto0.Loader.
+    ...
+    Coercions Graph ""
+    ```
+this produces a files `coercion_graph.dot`.
 
-     
+you can change this default name 
+
+```
+ Set CoercionGraph File  "newname.dot"
+```
+
+ or simply fixe the name when building the graph
+
+ ``` 
+ Coercions Graph "name.dot"
+```
