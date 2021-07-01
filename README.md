@@ -72,6 +72,7 @@ digraph coercion_graph {
 
 ### build
 ```
+cd coq-coercion-graph/
 make
 ```
 ### start
@@ -81,7 +82,7 @@ coqtop -I src -R theories Coerciongraph
 
 ### in the Coq session 
 ```
-Require Import Tuto0.Loader.
+Require Import Coerciongraph.Loader.
     ...
 Coercions Graph ""
 ```
