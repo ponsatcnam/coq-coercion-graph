@@ -1,4 +1,4 @@
-This is an just a small experiment to learn coq plugins.
+This is  just a small experiment to learn coq plugins.
 
 ## Drawing Coercion graph
 
